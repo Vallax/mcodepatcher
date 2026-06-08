@@ -366,7 +366,7 @@ This makes it possible to distribute reusable MCreator code customizations as sm
 
 ## Support Development
 
-MCodePatcher was originally developed for my own modding projects and workflows, but I've decided to share it freely for anyone in the MCreator community to use - it will be exciting to see what possibilities and time-savings may be unlocked.
+MCodePatcher was originally developed for my own modding projects and workflows, but I've decided to share it freely for anyone in the modding community to use for maximum efficiency and flexibility - it will be exciting to see what possibilities and time-savings may be unlocked.
 
 If MCodePatcher has saved you time, helped maintain large projects, or made regeneration-heavy workflows easier, any support towards my work would be highly appreciated.
 
