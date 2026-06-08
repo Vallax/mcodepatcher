@@ -1,0 +1,77 @@
+name: Build MCodePatcher
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    name: Build ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+          - ubuntu-latest
+          - macos-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install Linux Tk support
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y python3-tk tk-dev
+
+      - name: Install build dependencies
+        run: python -m pip install --upgrade pip pyinstaller watchdog
+
+      - name: Verify imports
+        run: python -c "import tkinter; import watchdog; print('Imports OK')"
+
+      - name: Build app
+        run: >
+          python -m PyInstaller
+          --noconfirm
+          --clean
+          --windowed
+          --name MCodePatcher
+          --hidden-import watchdog.observers.fsevents
+          --hidden-import watchdog.observers.inotify
+          --hidden-import watchdog.observers.kqueue
+          --hidden-import watchdog.observers.polling
+          --hidden-import watchdog.observers.read_directory_changes
+          MCodePatcherScript.py
+
+      - name: Zip Windows build
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path dist/MCodePatcher -DestinationPath MCodePatcher-windows.zip
+
+      - name: Zip Linux build
+        if: runner.os == 'Linux'
+        run: tar -czf MCodePatcher-linux.tar.gz -C dist MCodePatcher
+
+      - name: Zip macOS build
+        if: runner.os == 'macOS'
+        run: ditto -c -k --sequesterRsrc --keepParent dist/MCodePatcher.app MCodePatcher-macos.zip
+
+      - name: Upload build
+        uses: actions/upload-artifact@v7
+        with:
+          name: MCodePatcher-${{ runner.os }}
+          path: |
+            MCodePatcher-windows.zip
+            MCodePatcher-linux.tar.gz
+            MCodePatcher-macos.zip
+          if-no-files-found: ignore
