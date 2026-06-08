@@ -317,9 +317,9 @@ Features include:
 
 ---
 
-## Color Indicators
+## Colour Indicators
 
-| Color | Meaning |
+| Colour | Meaning |
 |---------|---------|
 | Green | Healthy or applied |
 | Red | Missing |
