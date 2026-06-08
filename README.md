@@ -349,8 +349,23 @@ Because advanced rules can target workspace-relative files or directories, a sha
 
 This makes it possible to distribute reusable MCreator code customizations as small, inspectable patch definitions rather than large generated-file forks. You could theoretically create entire MCreator plugins or generators with these.
 
----
+⸻
 
+## Support Development
+
+MCodePatcher was originally developed for my own modding projects and workflows, but I've decided to share it freely for anyone in the MCreator community to use - it will be exciting to see what possibilities and time-savings may be unlocked.
+
+If MCodePatcher has saved you time, helped maintain large projects, or made regeneration-heavy workflows easier, any support towards my work would be highly appreciated.
+
+Your support helps fund new MCodePatcher updates and future tools.
+
+I'm also the creator of popular horror mods like Arthropod Phobia Expansions and The Obsessed - You may enjoy them, accessible here on Curseforge!: https://www.curseforge.com/members/vllax/projects
+
+Patreon:
+
+https://patreon.com/vallax
+
+---
 ## Support
 
 Discord: https://discord.gg/sQQPZQSEpS
