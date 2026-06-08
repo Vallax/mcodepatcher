@@ -51,7 +51,18 @@ This allows patches to be as small or as large as needed, reducing the amount of
 
 MCodePatcher maintains a patch tree beside your generated workspace:
 
-text MCreator Workspace ├─ src/main/java/... └─ generated files  MCodePatcher Patch Tree ├─ file overrides ├─ snippet_injections/ ├─ header_injections/ ├─ advanced_snippet_injections/ └─ replacements.json 
+```text
+MCreator Workspace
+├─ src/main/java/...
+└─ generated files
+
+MCodePatcher Patch Tree
+├─ file overrides
+├─ snippet_injections/
+├─ header_injections/
+├─ advanced_snippet_injections/
+└─ replacements.json
+```
 
 When MCreator regenerates code:
 
