@@ -313,6 +313,25 @@ Features include:
 
 ---
 
+## Shareable Patch Packs
+
+Advanced rules are stored as standalone .inject.json files, making them easy to share between users and projects.
+
+A patch pack can be as simple as a folder of advanced rule files:
+
+```text
+advanced_snippet_injections/
+├─ custom_ai.inject.json
+├─ better_rendering.inject.json
+└─ networking_fix.inject.json
+```
+
+Users can copy those files into their own patch tree, review or edit the targets in MCodePatcher, and apply the same transformations to their workspace.
+
+Because advanced rules can target workspace-relative files or directories, a shared rule can modify many eligible generated files without requiring users to replace entire source files.
+
+This makes it possible to distribute reusable MCreator code customizations as small, inspectable patch definitions rather than large generated-file forks.
+
 ## Support
 
 Discord: https://discord.gg/sQQPZQSEpS
