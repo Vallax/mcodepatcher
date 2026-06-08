@@ -47,6 +47,23 @@ This allows patches to be as small or as large as needed, reducing the amount of
 
 ---
 
+## Download/Installation
+
+You can download the latest automated builds from GitHub Actions:
+
+1. Go to the **Actions** tab.
+2. Select **Build MCodePatcher**.
+3. Open the latest successful workflow run.
+4. Scroll to **Artifacts**.
+5. Download the zip for your OS - it will contain an executable software file you can add to your applications. These are unsigned, so will likely give security warnings upon first opening.
+   - `MCodePatcher-Windows`
+   - `MCodePatcher-Linux`
+   - `MCodePatcher-macOS`
+
+Artifacts are generated automatically by GitHub’s build runners. They may expire after a limited retention period, so use the latest successful run when possible.
+
+---
+
 ## How It Works
 
 MCodePatcher maintains a patch tree beside your generated workspace:
