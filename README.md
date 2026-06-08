@@ -27,9 +27,9 @@ Editing generated files directly works until MCreator regenerates them.
 Traditional approaches usually force you to choose between:
 
 - Losing changes during regeneration
+- Locking files and then running into incompatibilities after changing generator (Manually reapplying edits after updates)
 - Maintaining a separate fork of generated files
-- Manually reapplying edits after updates
-- Replacing entire files when only a few lines changed
+- Switching to using code for entire files when only a few lines changes were needed
 
 MCodePatcher provides several levels of customization instead:
 
