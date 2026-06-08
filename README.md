@@ -174,6 +174,19 @@ It tracks:
 
 As a workspace evolves, MCodePatcher helps identify which customizations are still active, which require attention, and which can be safely carried forward into another generator or Minecraft version.
 
+## Caution: Replacing Non-Generated Files
+
+MCodePatcher can replace more than Java source files. Normal files placed in the patch tree can act as workspace-relative file overrides, and many file types can be copied into the workspace automatically when their patch-tree counterpart changes.
+
+This is useful for assets, JSON files, text files, resources, configs, or other files that need to be kept in sync.
+
+However, use caution when overriding files outside MCreator’s generated source areas, especially outside folders such as:
+
+```text
+src/main/java/
+src/main/resources/
+```
+
 ---
 
 ## Workspace Version Manager
