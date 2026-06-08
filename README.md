@@ -332,6 +332,8 @@ Because advanced rules can target workspace-relative files or directories, a sha
 
 This makes it possible to distribute reusable MCreator code customizations as small, inspectable patch definitions rather than large generated-file forks.
 
+---
+
 ## Support
 
 Discord: https://discord.gg/sQQPZQSEpS
