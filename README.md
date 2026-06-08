@@ -178,7 +178,7 @@ As a workspace evolves, MCodePatcher helps identify which customizations are sti
 
 MCodePatcher can replace more than Java source files. Normal files placed in the patch tree can act as workspace-relative file overrides, and many file types can be copied into the workspace automatically when their patch-tree counterpart changes.
 
-This is useful for assets, JSON files, text files, resources, configs, or other files that need to be kept in sync.
+This is useful for assets, JSON files, text files, resources, configs, or other files that need to be adapted across generators.
 
 However, use caution when overriding files outside MCreator’s generated source areas, especially outside folders such as:
 
