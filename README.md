@@ -330,7 +330,7 @@ Users can copy those files into their own patch tree, review or edit the targets
 
 Because advanced rules can target workspace-relative files or directories, a shared rule can modify many eligible generated files without requiring users to replace entire source files.
 
-This makes it possible to distribute reusable MCreator code customizations as small, inspectable patch definitions rather than large generated-file forks.
+This makes it possible to distribute reusable MCreator code customizations as small, inspectable patch definitions rather than large generated-file forks. You could theoretically create entire MCreator plugins or generators with these.
 
 ---
 
