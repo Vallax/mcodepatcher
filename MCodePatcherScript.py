@@ -14566,7 +14566,7 @@ class MCodePatcherApp:
                 "• Merge/copy patch files from one generator folder into another\n"
                 "• Existing target patch files are kept unless overwrite is enabled\n\n"
 
-                "MCodePatcher automatically generates per-generator folder trees mirroring your entire MCreator workspaces when detected open"
+                "MCodePatcher automatically generates per-generator folder trees mirroring your entire MCreator workspaces when detected open\n\n"
                 
                 "WORKSPACE TREE\n"
                 "• Browse, search, open, and reveal generated workspace files\n"
